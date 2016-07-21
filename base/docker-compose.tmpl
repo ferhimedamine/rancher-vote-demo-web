@@ -1,9 +1,9 @@
 {{ .Project }}:
-image: rancher/load-balancer-service
-ports:
-- 8001:8001
-links:
-- {{ .Project }}-app:{{ .Project }}-app
+  image: rancher/load-balancer-service
+  ports:
+    - 8001:8001
+  links:
+    - {{ .Project }}-app:{{ .Project }}-app
 
 {{ .Project }}-app:
   image: {{ .Owner }}/{{ .Project }}:{{ .Tag }}
