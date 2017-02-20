@@ -1,7 +1,5 @@
 {{ .Project }}-app:
   image: {{ .Owner }}/{{ .Project }}:{{ .Tag }}
-  expose:
-    - 8001
   environment:
     RANCHER_SERVICE_DISCOVERY: 'true'
     LISTEN_PORT: 8001
