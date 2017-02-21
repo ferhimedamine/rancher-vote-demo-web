@@ -1,0 +1,12 @@
+vote-demo-web-app:
+  image: ferhimedamine/vote-demo-web:ferhimedamine_vote-demo-web_feature-amine-1_1.3.2_5_e68470f5
+  environment:
+    RANCHER_SERVICE_DISCOVERY: 'true'
+    LISTEN_PORT: 8001
+  labels:
+    io.rancher.container.pull_image: always
+    io.rancher.container.hostname_override: container_name
+    traefik.enable: 'true'
+    traefik.alias: vote
+    traefik.port: '8001'
+    traefik.domain: dev.cloudbuzz.io
