@@ -1,0 +1,16 @@
+.catalog:
+  name: feature-amine-1
+  version: ferhimedamine_vote-demo-web_feature-amine-1_1.3.1_9_7aab9c7e
+  description: vote-demo-web
+  uuid: feature-amine-1-1
+
+vote-demo-web-app:
+  scale: 1
+  health_check:
+    port: 8001
+    interval: 10000
+    strategy: none
+    unhealthy_threshold: 2
+    request_line: GET / HTTP/1.1
+    healthy_threshold: 2
+    response_timeout: 2000

@@ -1,0 +1,16 @@
+.catalog:
+  name: test_dev_test
+  version: ferhimedamine_vote-demo-web_test_dev_test_1.3.1_4_a294ac1c
+  description: vote-demo-web
+  uuid: test_dev_test-0
+
+vote-demo-web-app:
+  scale: 1
+  health_check:
+    port: 8001
+    interval: 10000
+    strategy: none
+    unhealthy_threshold: 2
+    request_line: GET / HTTP/1.1
+    healthy_threshold: 2
+    response_timeout: 2000
